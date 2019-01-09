@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             tools:context=".ui.fragments.QuestionarioAvaliacaoFragment"
+                                             android:background="#ffffff">
+
+    <TextView
+            android:id="@+id/questionario_avaliacao_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/fragment_questionario_avaliacao_titulo"
+            android:textColor="@color/colorGreyishBrown"
+            android:textSize="16sp"
+            android:theme="@style/TextLabelHome"
+            tools:text="Avaliação"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/questionario_avaliacao_lista_estados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_marginTop="10dp"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/questionario_avaliacao_titulo"
+            tools:listitem="@layout/item_lista_questionario_estados"/>
+
+</android.support.constraint.ConstraintLayout>

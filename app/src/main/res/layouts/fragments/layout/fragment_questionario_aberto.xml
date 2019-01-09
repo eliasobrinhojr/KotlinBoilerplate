@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".ui.fragments.QuestionarioAbertoFragment"
+                                             android:background="#ffffffff">
+
+    <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/questionario_anotar_btn">
+        <LinearLayout
+                android:id="@+id/linearFragments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <FrameLayout
+                    android:id="@+id/container_frame_avaliacao"
+                    tools:layout="@layout/fragment_questionario_avaliacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            </FrameLayout>
+
+            <FrameLayout
+                    android:id="@+id/container_frame_anotacoes"
+                    tools:layout="@layout/fragment_anotacoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+            android:id="@+id/questionario_anotar_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/botao_anotar_icone_estados"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="ANOTAR"
+            android:background="@drawable/botao_anotar"
+            android:textColor="@drawable/botao_anotar_texto_estados"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/questionario_finalizar_btn"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+            android:id="@+id/questionario_finalizar_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="FINALIZAR SUPERVISÃO"
+            android:enabled="false"
+            android:background="@drawable/botao_finalizar_estados"
+            android:textColor="@drawable/botao_finalizar_texto_estados"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/questionario_anotar_btn"/>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.pemaza.supervisao">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".dagger.MainApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activity.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.TelaCheia">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.MainActivity"/>
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.HomeActivity" />
+        <activity android:name=".ui.activity.PerfilActivity"/>
+        <activity
+            android:name=".ui.activity.HistoricoActivity"
+            android:theme="@style/Theme.AppCompat.ComToolbar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+        </activity>
+        <activity android:name=".ui.activity.QuestionarioActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0d470acc3c76aeeabdf99b151097f43987180fd9" />
+    </application>
+
+</manifest>

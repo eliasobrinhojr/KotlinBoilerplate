@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="questionario"
+                type="br.com.pemaza.supervisao.model.Questionario"/>
+
+        <import type="br.com.pemaza.supervisao.extensions.DateKt"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/item_lista_agendamento_agendada_cardview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp">
+
+                <TextView
+                        android:id="@+id/item_lista_agendamento_agendada_situacao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:theme="@style/TextLabelAgendadas"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:text="Avaliando "/>
+
+                <TextView
+                        android:id="@+id/item_lista_agendamento_agendada_hora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" • Faltam 5 dias"
+                        android:theme="@style/TextLabelHora"
+                        app:layout_constraintBottom_toBottomOf="@+id/item_lista_agendamento_agendada_situacao"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/item_lista_agendamento_agendada_situacao"
+                        app:layout_constraintTop_toTopOf="@+id/item_lista_agendamento_agendada_situacao"/>
+
+                <ImageView
+                        android:id="@+id/item_lista_agendamento_agendada_img"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="@string/item_agendamento_img"
+                        android:src="@drawable/icon_loja"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/item_lista_agendamento_agendada_situacao"/>
+
+                <TextView
+                        android:id="@+id/item_lista_agendamento_agendada_filial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@{@string/loja(questionario.filial)}"
+                        android:theme="@style/TextLabelLojaFilial"
+                        app:layout_constraintStart_toEndOf="@+id/item_lista_agendamento_agendada_img"
+                        app:layout_constraintTop_toBottomOf="@+id/item_lista_agendamento_agendada_hora"
+                        tools:text="Loja 30"/>
+
+                <TextView
+                        android:id="@+id/item_lista_agendamento_agendamento_inicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:theme="@style/TextLabelInicio"
+                        app:layout_constraintStart_toStartOf="@+id/item_lista_agendamento_agendada_filial"
+                        app:layout_constraintTop_toBottomOf="@+id/item_lista_agendamento_agendada_filial"/>
+
+                <TextView
+                        android:id="@+id/item_lista_agendamento_agendada_data_inicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@{DateKt.toPtBr(questionario.data_inicio)}"
+                        android:theme="@style/TextLabelDataInicio"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/item_lista_agendamento_agendamento_inicio"
+                        app:layout_constraintTop_toBottomOf="@+id/item_lista_agendamento_agendamento_inicio"
+                        tools:text="08/07/2018"/>
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/item_lista_agendamento_agendada_lista_pessoas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="2dp"
+                        android:maxWidth="50dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/item_lista_agendamento_agendada_ver_mais"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@+id/item_lista_agendamento_agendamento_inicio"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"/>
+
+                <TextView
+                        android:id="@+id/item_lista_agendamento_agendada_ver_mais"
+                        android:layout_width="22dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:theme="@style/TextLabelVerMais"
+                        app:layout_constraintBottom_toBottomOf="@+id/item_lista_agendamento_agendada_lista_pessoas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/item_lista_agendamento_agendada_lista_pessoas"
+                        app:layout_constraintTop_toTopOf="@+id/item_lista_agendamento_agendada_lista_pessoas"
+                        app:layout_constraintVertical_bias="0.35000002"
+                        tools:text="+2"/>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

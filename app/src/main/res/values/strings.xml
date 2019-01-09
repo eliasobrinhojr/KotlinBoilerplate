@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Supervisao</string>
+    <string name="pmz_logo">Logo da PMZ, splash screen</string>
+    <string name="login_username">Usuário</string>
+    <string name="login_password">Senha</string>
+    <string name="login_button">ENTRAR</string>
+    <string name="pmz_splash">Logo da PMZ, splash screen</string>
+    <string name="em_andamento">Em andamento</string>
+    <string name="agendadas">Agendadas</string>
+    <string name="lb_inicio">início</string>
+    <string name="lb_termino">Término</string>
+    <string name="item_agendamento_img">item_agendamento_img</string>
+    <string name="inicio_previsto">início previsto</string>
+    <string name="login_button_sending">ENVIANDO…</string>
+    <string name="perfil_banner_image">Banner do Perfil</string>
+    <string name="perfil_banner_text">Perfil do usuário</string>
+    <string name="perfil_sair_button">SAIR DA CONTA</string>
+    <string name="perfil_sair_button_icon">Icone do botão de sair da conta</string>
+    <string name="loja">Loja %s</string>
+
+    <string name="historico_banner_img">Banner da tela de historico</string>
+</resources>

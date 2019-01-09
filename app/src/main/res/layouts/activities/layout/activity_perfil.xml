@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".ui.activity.PerfilActivity">
+
+    <ImageView
+            android:id="@+id/perfil_banner_image"
+            android:layout_width="0dp"
+            android:layout_height="143dp"
+            android:contentDescription="@string/perfil_banner_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/colorBlueGrey"/>
+
+    <TextView
+            android:id="@+id/perfil_banner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@string/font_family_regular"
+            android:text="@string/perfil_banner_text"
+            android:textColor="@color/colorTextWhiteGray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/perfil_banner_image"/>
+
+    <ImageView
+            android:id="@+id/perfil_icon_image"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_profile_user"/>
+
+    <ImageView
+            android:id="@+id/perfil_icon_edit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/perfil_icon_image"
+            app:srcCompat="@drawable/edit_icon"/>
+
+    <Button
+            android:id="@+id/perfil_sair_button"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="27dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginStart="33dp"
+            android:background="@color/colorBlueGrey"
+            android:drawableStart="@drawable/icon_exit"
+            android:paddingLeft="90dp"
+            android:paddingRight="90dp"
+            android:text="@string/perfil_sair_button"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:id="@+id/perfil_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@string/font_family_black"
+            android:textColor="@color/colorBlackGrey"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfil_icon_image"
+            tools:text="Robson da Silva"/>
+
+    <ImageView
+            android:id="@+id/perfil_back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_button"/>
+
+</android.support.constraint.ConstraintLayout>

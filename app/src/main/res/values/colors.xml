@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#e0e0e0</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="inputActivated">#308dcc</color>
+    <color name="textInputHint">#9d9d9c</color>
+    <color name="colorLoginButtonTextDisabled">#38000000</color>
+    <color name="colorLoginButtonTextEnabled">#fff</color>
+    <color name="colorBlueGrey">#1f354c</color>
+    <color name="colorButtonDisabled">#33999999</color>
+    <color name="colorButtonSending">#f7a52c</color>
+    <color name="colorTextWhiteGray">#f5f5f5</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="colorBlackGrey">#4d4d46</color>
+    <color name="inputNormal">#e0e0e0</color>
+    <color name="colorGreyishBrown">#4e4e4e</color>
+</resources>

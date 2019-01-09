@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             tools:context=".ui.fragments.AnotacoesFragment"
+                                             android:background="#ffffff">
+
+    <TextView
+
+            android:text="Anotações"
+            android:theme="@style/TextLabelHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_anotacoes_label" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
+            android:layout_marginStart="15dp"/>
+
+    <FrameLayout
+            android:id="@+id/container_frame_anotacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fragment_anotacoes_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/lista_anotacoes">
+
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/lista_anotacoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_lista_anotacoes"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_anotacoes_label"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

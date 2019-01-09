@@ -1,0 +1,23 @@
+*.iml
+.gradle
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+gradle/wrapper/gradle-wrapper\.jar
+
+gradlew
+
+gradlew\.bat
+
+<<<<<<< HEAD
+\.idea/caches/
+
+\.idea/
+=======
+\.idea/caches/build_file_checksums\.ser
+>>>>>>> developer
